@@ -1,20 +1,136 @@
-<!doctype html><html lang=en-us><head><title>Winja CTF 2021 // Tom Plant</title><link rel="shortcut icon" href=avatar.ico><meta charset=utf-8><meta name=generator content="Hugo 0.82.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Tom Plant"><meta name=description content><link rel=stylesheet href=https://tplant.com.au/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css><meta name=twitter:card content="summary"><meta name=twitter:title content="Winja CTF 2021"><meta name=twitter:description content="A hack quest CTF by nullcon, good variety of difficulty and categories. Keeping track of the map interface was painful though.
+<!doctype html><html lang=en-us>
+<head>
+<title>Winja CTF 2021 // Tom Plant</title>
+<link rel="shortcut icon" href=avatar.ico>
+<meta charset=utf-8>
+<meta name=generator content="Hugo 0.87.0">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=author content="Tom Plant">
+<meta name=description content>
+<link rel=stylesheet href=https://tplant.com.au/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Winja CTF 2021">
+<meta name=twitter:description content="A hack quest CTF by nullcon, good variety of difficulty and categories. Keeping track of the map interface was painful though.
 Are Yaar Points: 120  In a village there were 4 best friends one of them was Ramlal whose favorite dish was &lsquo;pulihora&rsquo;. He was a farmer and with lot of hardwork and passion he became CEO of a Software Organization. https://twitter.com/kulkarniramlal
- The Twitter account linked to a GitHub profile, containing a single repo."><meta property="og:title" content="Winja CTF 2021"><meta property="og:description" content="A hack quest CTF by nullcon, good variety of difficulty and categories. Keeping track of the map interface was painful though.
+ The Twitter account linked to a GitHub profile, containing a single repo.">
+<meta property="og:title" content="Winja CTF 2021">
+<meta property="og:description" content="A hack quest CTF by nullcon, good variety of difficulty and categories. Keeping track of the map interface was painful though.
 Are Yaar Points: 120  In a village there were 4 best friends one of them was Ramlal whose favorite dish was &lsquo;pulihora&rsquo;. He was a farmer and with lot of hardwork and passion he became CEO of a Software Organization. https://twitter.com/kulkarniramlal
- The Twitter account linked to a GitHub profile, containing a single repo."><meta property="og:type" content="article"><meta property="og:url" content="https://tplant.com.au/blog/winja-ctf-2021/"><meta property="article:section" content="blog"><meta property="article:published_time" content="2021-03-08T00:00:00+00:00"><meta property="article:modified_time" content="2021-03-08T00:00:00+00:00"></head><body><header class=app-header><a href=https://tplant.com.au/><img class=app-header-avatar src=/avatar.png alt="Tom Plant"></a><h1>Tom Plant</h1><nav class=app-header-menu><a class=app-header-menu-item href=/>Home</a>
+ The Twitter account linked to a GitHub profile, containing a single repo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tplant.com.au/blog/winja-ctf-2021/"><meta property="article:section" content="blog">
+<meta property="article:published_time" content="2021-03-08T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-03-08T00:00:00+00:00">
+</head>
+<body>
+<header class=app-header>
+<a href=https://tplant.com.au/><img class=app-header-avatar src=/avatar.png alt="Tom Plant"></a>
+<h1>Tom Plant</h1>
+<nav class=app-header-menu>
+<a class=app-header-menu-item href=/>Home</a>
 -
-<a class=app-header-menu-item href=/tags/>Tags</a></nav><p>security, devops, and too much zoomer humour</p><div class=app-header-social><a href=https://github.com/pl4nty target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a><a href=https://linkedin.com/in/tomplant target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin"><title>Linkedin</title><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div></header><main class=app-container><article class=post><header class=post-header><h1 class=post-title>Winja CTF 2021</h1><div class=post-meta><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Mar 8, 2021</div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><title>clock</title><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>3 min read</div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><a class=tag href=https://tplant.com.au/tags/ctf/>CTF</a></div></div></header><div class=post-content><p>A hack quest CTF by <a href=https://nullcon.net/>nullcon</a>, good variety of difficulty and categories. Keeping track of the map interface was painful though.</p><h2 id=are-yaar>Are Yaar&nbsp;<a class=anchor href=#are-yaar><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></h2><h3 id=points-120>Points: 120</h3><blockquote><p>In a village there were 4 best friends one of them was Ramlal whose favorite dish was &lsquo;pulihora&rsquo;. He was a farmer and with lot of hardwork and passion he became CEO of a Software Organization. <a href=https://twitter.com/kulkarniramlal>https://twitter.com/kulkarniramlal</a></p></blockquote><p>The Twitter account linked to <a href=https://github.com/ramlalkulkarni/>a GitHub profile</a>, containing a single repo. There&rsquo;s an interesting <code>Notice - Investment Fraud-pdf.pdf</code> inside, but it has parts redacted.</p><p><img src=Are_Yaar-1.png alt="censored PDF"></p><p>Opening in InkScape let us remove the censor bars, revealing the QR code.</p><p><img src=Are_Yaar-2.png alt=QR></p><p>It&rsquo;s just a base64 string, decoding gave the flag.</p><h2 id=bad-api>Bad Api&nbsp;<a class=anchor href=#bad-api><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></h2><h3 id=points-200>Points: 200</h3><blockquote><p>I got dumped here. Help me find my key out.
+<a class=app-header-menu-item href=/tags/>Tags</a>
+</nav>
+<p>security, devops, and too much zoomer humour</p>
+<div class=app-header-social>
+<a href=https://github.com/pl4nty target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a>
+<a href=https://linkedin.com/in/tomplant target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin"><title>Linkedin</title><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+</a>
+</div>
+</header>
+<main class=app-container>
+<article class=post>
+<header class=post-header>
+<h1 class=post-title>Winja CTF 2021</h1>
+<div class=post-meta>
+<div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+Mar 8, 2021
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><title>clock</title><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+3 min read
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+<a class=tag href=https://tplant.com.au/tags/ctf/>CTF</a>
+</div>
+</div>
+</header>
+<div class=post-content>
+<p>A hack quest CTF by <a href=https://nullcon.net/>nullcon</a>, good variety of difficulty and categories. Keeping track of the map interface was painful though.</p>
+<h2 id=are-yaar>Are Yaar&nbsp;<a class=anchor href=#are-yaar><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<h3 id=points-120>Points: 120</h3>
+<blockquote>
+<p>In a village there were 4 best friends one of them was Ramlal whose favorite dish was &lsquo;pulihora&rsquo;. He was a farmer and with lot of hardwork and passion he became CEO of a Software Organization. <a href=https://twitter.com/kulkarniramlal>https://twitter.com/kulkarniramlal</a></p>
+</blockquote>
+<p>The Twitter account linked to <a href=https://github.com/ramlalkulkarni/>a GitHub profile</a>, containing a single repo. There&rsquo;s an interesting <code>Notice - Investment Fraud-pdf.pdf</code> inside, but it has parts redacted.</p>
+<p><img src=Are_Yaar-1.png alt="censored PDF"></p>
+<p>Opening in InkScape let us remove the censor bars, revealing the QR code.</p>
+<p><img src=Are_Yaar-2.png alt=QR></p>
+<p>It&rsquo;s just a base64 string, decoding gave the flag.</p>
+<h2 id=bad-api>Bad Api&nbsp;<a class=anchor href=#bad-api><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<h3 id=points-200>Points: 200</h3>
+<blockquote>
+<p>I got dumped here. Help me find my key out.
 Look everywhere, including the hidden rooms.
-I am waiting for you with a flag in my hand. <a href=https://chal.xyz>https://chal.xyz</a></p></blockquote><blockquote><p>Note: An unknown service is running on following <code>services.xyz:10344</code></p></blockquote><p>The site sounds like a password form, so we looked at the service first.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>nmap services.xyz -v -T4 -A -Pn -p <span style=color:#bd93f9>1234</span>
+I am waiting for you with a flag in my hand. <a href=https://chal.xyz>https://chal.xyz</a></p>
+</blockquote>
+<blockquote>
+<p>Note: An unknown service is running on following <code>services.xyz:10344</code></p>
+</blockquote>
+<p>The site sounds like a password form, so we looked at the service first.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>nmap services.xyz -v -T4 -A -Pn -p <span style=color:#bd93f9>1234</span>
 
 PORT      STATE SERVICE VERSION
 10344/tcp open  redis   Redis key-value store
-</code></pre></div><p>It&rsquo;s a Redis server, so we tried connecting with <code>redis-cli</code>.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>redis-cli -h services.xyz -p <span style=color:#bd93f9>1234</span>
+</code></pre></div><p>It&rsquo;s a Redis server, so we tried connecting with <code>redis-cli</code>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>redis-cli -h services.xyz -p <span style=color:#bd93f9>1234</span>
 services.xyz:1234&gt; keys *
 1<span style=color:#ff79c6>)</span> <span style=color:#f1fa8c>&#34;ALLYOURBASE&#34;</span>
 servicesxyz:1234&gt; get ALLYOURBASE
 <span style=color:#f1fa8c>&#34;AREBELONGTOUS&#34;</span>
-</code></pre></div><p>The password form was HTML with a hidden element, so replaying its POST with <code>username=AREBELONGTOUS&secret_key=ALLYOURBASE</code> got the flag.</p><h2 id=nato>NATO&nbsp;<a class=anchor href=#nato><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></h2><h3 id=points-200-1>Points: 200</h3><blockquote><p>A for Apple, B for Ball,can you decipher it faster than all? <a href=https://chal.xyz>https://chal.xyz</a></p></blockquote><p>The challenge site (a password form) linked to a <code>Clue.zip</code>, containing an
-m4a recording of some NATO alphabet words. They translated to <code>LZJYOVZBY</code>. The link text was <code>619240122</code>, so caesar-shifting each letter by its corresponding number gives <code>RASASVADA</code>. This password got the flag.</p><h2 id=ninja-injection>Ninja Injection&nbsp;<a class=anchor href=#ninja-injection><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></h2><h3 id=points-200-2>Points: 200</h3><blockquote><p>Injections are to be administered carefully. Although, giving one in a lift is never advised. Until unless, you are a Ninja! <a href=https://chal.xyz/>https://chal.xyz/</a></p></blockquote><p>The challenge site seemed blank, but there was a comment in the source.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#6272a4>&lt;!-- Don&#39;t forget you are a l33t because of your name only.--&gt;</span>
-</code></pre></div><p><code>name</code> as a querystring parameter returned some form of templated string. So we tried some template injections, and <code>{{1*1}}</code> executed successfully. This seemed like a Jinja template based on the challenge name, so with some research we found <a href=https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee>an attack to achieve RCE</a>. <code>flag.txt</code> was in the working directory.</p><h2 id=hazzy>Hazzy&nbsp;<a class=anchor href=#hazzy><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></h2><h3 id=points-250>Points: 250</h3><blockquote><p>I can see in this pandemic everything is flag{Hazzy_?} <a href=https://chal.xyz/chal.gif>https://chal.xyz/chal.gif</a></p></blockquote><p>The challenge was this gif:</p><p><img src=Hazzy-1.gif alt="Caprio laughing"></p><p>The overlaid numbers were an <a href="https://gchq.github.io/CyberChef/#recipe=A1Z26_Cipher_Decode('Space')">A1Z26 cipher</a>, giving the flag when combined with the hint.</p><h2 id=md20>MD20&nbsp;<a class=anchor href=#md20><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a></h2><h3 id=points-300>Points: 300</h3><blockquote><p>Nuclear committee is suspicious about their codes getting leaked but 1o1 1o1 they forgot the master password to reset. <a href=https://chal.xyz>https://chal.xyz</a></p></blockquote><p>The challenge site linked to a password checker, and had a hint.</p><blockquote><p>Hello there ,Does hashing a nuclear code 10 times make it strong ? (I&rsquo;ve heard so).But the code is VERY Small in length..I mean really V E R Y short in length.</p></blockquote><p>There&rsquo;s also a broken <code>&lt;img src="output.PN"></code>, fixing it to <code>output.png</code> gave another hint about the hashed password being a single character.</p><p>We moved on to the password checker, which dumped its source.</p><p>There was a hash reversal, and a WAF bypass. From the hints, the hash is a single character MD5ed 10 times, so time to bruteforce. <code>pwntools</code> will take too long, time to break out CyberChef.</p><p><img src=MD20-2.png alt="CyberChef recipe"></p><p>Searching manually, <code>t</code> is the matching character. The checker only hashes once, so we need 9th hash <code>e6dbdd9d770af334d8aebe102b1fc035</code>.</p><p>The checker needs <code>_</code> as a querystring parameter, but it&rsquo;s blocked by the WAF with <code>strpos</code>. And <code>%</code> is blocked too, so no URL-encoding. With some research, we found <a href=https://tipi-hack.github.io/2018/03/25/insomni%27hack-18-phuck.html>this blogpost</a> - apparently PHP treats <code>.</code> in the querystring as <code>_</code>. <code>?.=e6dbdd9d770af334d8aebe102b1fc035</code> gave the flag.</p></div><div class=post-footer></div></article></main></body></html>
+</code></pre></div><p>The password form was HTML with a hidden element, so replaying its POST with <code>username=AREBELONGTOUS&secret_key=ALLYOURBASE</code> got the flag.</p>
+<h2 id=nato>NATO&nbsp;<a class=anchor href=#nato><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<h3 id=points-200-1>Points: 200</h3>
+<blockquote>
+<p>A for Apple, B for Ball,can you decipher it faster than all? <a href=https://chal.xyz>https://chal.xyz</a></p>
+</blockquote>
+<p>The challenge site (a password form) linked to a <code>Clue.zip</code>, containing an
+m4a recording of some NATO alphabet words. They translated to <code>LZJYOVZBY</code>. The link text was <code>619240122</code>, so caesar-shifting each letter by its corresponding number gives <code>RASASVADA</code>. This password got the flag.</p>
+<h2 id=ninja-injection>Ninja Injection&nbsp;<a class=anchor href=#ninja-injection><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<h3 id=points-200-2>Points: 200</h3>
+<blockquote>
+<p>Injections are to be administered carefully. Although, giving one in a lift is never advised. Until unless, you are a Ninja! <a href=https://chal.xyz/>https://chal.xyz/</a></p>
+</blockquote>
+<p>The challenge site seemed blank, but there was a comment in the source.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#6272a4>&lt;!-- Don&#39;t forget you are a l33t because of your name only.--&gt;</span>
+</code></pre></div><p><code>name</code> as a querystring parameter returned some form of templated string. So we tried some template injections, and <code>{{1*1}}</code> executed successfully. This seemed like a Jinja template based on the challenge name, so with some research we found <a href=https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee>an attack to achieve RCE</a>. <code>flag.txt</code> was in the working directory.</p>
+<h2 id=hazzy>Hazzy&nbsp;<a class=anchor href=#hazzy><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<h3 id=points-250>Points: 250</h3>
+<blockquote>
+<p>I can see in this pandemic everything is flag{Hazzy_?} <a href=https://chal.xyz/chal.gif>https://chal.xyz/chal.gif</a></p>
+</blockquote>
+<p>The challenge was this gif:</p>
+<p><img src=Hazzy-1.gif alt="Caprio laughing"></p>
+<p>The overlaid numbers were an <a href="https://gchq.github.io/CyberChef/#recipe=A1Z26_Cipher_Decode('Space')">A1Z26 cipher</a>, giving the flag when combined with the hint.</p>
+<h2 id=md20>MD20&nbsp;<a class=anchor href=#md20><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<h3 id=points-300>Points: 300</h3>
+<blockquote>
+<p>Nuclear committee is suspicious about their codes getting leaked but 1o1 1o1 they forgot the master password to reset. <a href=https://chal.xyz>https://chal.xyz</a></p>
+</blockquote>
+<p>The challenge site linked to a password checker, and had a hint.</p>
+<blockquote>
+<p>Hello there ,Does hashing a nuclear code 10 times make it strong ? (I&rsquo;ve heard so).But the code is VERY Small in length..I mean really V E R Y short in length.</p>
+</blockquote>
+<p>There&rsquo;s also a broken <code>&lt;img src="output.PN"></code>, fixing it to <code>output.png</code> gave another hint about the hashed password being a single character.</p>
+<p>We moved on to the password checker, which dumped its source.</p>
+<p>There was a hash reversal, and a WAF bypass. From the hints, the hash is a single character MD5ed 10 times, so time to bruteforce. <code>pwntools</code> will take too long, time to break out CyberChef.</p>
+<p><img src=MD20-2.png alt="CyberChef recipe"></p>
+<p>Searching manually, <code>t</code> is the matching character. The checker only hashes once, so we need 9th hash <code>e6dbdd9d770af334d8aebe102b1fc035</code>.</p>
+<p>The checker needs <code>_</code> as a querystring parameter, but it&rsquo;s blocked by the WAF with <code>strpos</code>. And <code>%</code> is blocked too, so no URL-encoding. With some research, we found <a href=https://tipi-hack.github.io/2018/03/25/insomni%27hack-18-phuck.html>this blogpost</a> - apparently PHP treats <code>.</code> in the querystring as <code>_</code>. <code>?.=e6dbdd9d770af334d8aebe102b1fc035</code> gave the flag.</p>
+</div>
+<div class=post-footer>
+</div>
+</article>
+</main>
+</body>
+</html>
